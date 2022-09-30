@@ -133,6 +133,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
 AWS_ACCES_KEY_ID = config('AWS_ACCES_KEY_ID')
 
+
+
 # STORAGE CONFIGURATION IN S3 AWS
 #-----------------------------------------------------------------------
 
