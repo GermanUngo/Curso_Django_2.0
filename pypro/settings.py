@@ -36,6 +36,8 @@ DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOST', cast =Csv())
 
+AUTH_USER_MODEL = 'base.User'
+
 
 # Application definition
 
