@@ -10,6 +10,7 @@ python-decouple = "*"
 gunicorn = "*"
 psycopg2-binary = "*"
 django-s3-folder-storage = "*"
+collectfast = "*"
 
 [dev-packages]
 flake8 = "*"
