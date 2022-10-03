@@ -9,6 +9,7 @@ pytest-django = "*"
 python-decouple = "*"
 gunicorn = "*"
 psycopg2-binary = "*"
+django-s3-folder-storage = "*"
 
 [dev-packages]
 flake8 = "*"

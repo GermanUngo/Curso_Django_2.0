@@ -10,13 +10,15 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 from functools import partial
 from pathlib import Path
 
 import dj_database_url
 from decouple import Csv, Config
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 from decouple import config
 from django.conf.global_settings import STATIC_ROOT, MEDIA_URL, MEDIA_ROOT
 
@@ -131,14 +133,14 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
-AWS_ACCES_KEY_ID = config('AWS_ACCES_KEY_ID')
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
 
 
 # STORAGE CONFIGURATION IN S3 AWS
 #-----------------------------------------------------------------------
 
-if AWS_ACCES_KEY_ID:
+if AWS_ACCESS_KEY_ID:
     AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
     AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
     AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }
