@@ -82,6 +82,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'pypro.wsgi.application'
 
+# Configuração Django Toolbar
+
+if DEBUG:
+    INSTALLED_APPS.append('debug_toolbar')
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
