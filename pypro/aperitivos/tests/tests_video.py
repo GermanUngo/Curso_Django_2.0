@@ -13,7 +13,7 @@ def test_status_code(resp):
     assert resp.status_code==200
 
 def test_titulo_video(resp):
-    assert_contains(resp, '<h1>Video Aperitivo: A Beleza de Python </h1>')
+    assert_contains(resp, 'Video Aperitivo: A Beleza de Python')
 
 def test_conteudo_video(resp):
     assert_contains(resp, '<iframe src="https://player.vimeo.com/video/760852969?h=a950fb059a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"')
