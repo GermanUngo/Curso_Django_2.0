@@ -80,7 +80,7 @@
           <url-type value="DATABASE" />
           <host value="localhost" />
           <port value="5434" />
-          <database value="postgres" />
+          <database value="pythonpro" />
           <type value="USER_PASSWORD" />
           <user value="pythonpro" />
           <deprecated-pwd value="cHl0aG9ucHJv" />
