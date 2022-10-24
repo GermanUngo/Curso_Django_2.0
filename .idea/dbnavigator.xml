@@ -38,6 +38,13 @@
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="75dacc17-8a8d-4d77-a8d5-df45aebfe22b" />
   </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="75dacc17-8a8d-4d77-a8d5-df45aebfe22b" dataset="public.aperitivos_video" active-filter-id="dff13e00-ee06-479e-a398-ed07b8da7e7e">
+      <filter id="dff13e00-ee06-479e-a398-ed07b8da7e7e" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+  </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
   </component>
