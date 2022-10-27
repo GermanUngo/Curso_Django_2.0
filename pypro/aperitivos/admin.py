@@ -5,4 +5,6 @@ from pypro.aperitivos.models import Video
 
 @register(Video)
 class VideoAdmin(ModelAdmin):
-    pass
+    list_display = ('titulo', 'slug', 'creation', )
+    ordering = ('creation', )
+    prepopulated_fields = {'slug':('titulo', )}
