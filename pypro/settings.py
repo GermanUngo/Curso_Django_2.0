@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pypro.base',
     'pypro.aperitivos',
+    'pypro.modulos',
 
 ]
 
