@@ -10,9 +10,11 @@ from pypro.modulos.models import Aula, Modulo
 def modulo(db):
     return mommy.make(Modulo)
 
+
 @pytest.fixture
 def aulas(modulo):
     return mommy.make(Aula, 3, modulo=modulo)
+
 
 @pytest.fixture
 def resp(client, modulo, aulas):
@@ -35,3 +37,8 @@ def test_publico(resp, modulo: Modulo):
 def test_aulas_titulos(resp, aulas):
     for aula in aulas:
         assert_contains(resp, aula.titulo)
+
+
+def test_aulas_links(resp, aulas):
+    for aula in aulas:
+        assert_contains(resp, aula.get_absolute_url())
