@@ -16,6 +16,7 @@ class Modulo(OrderedModel):
     order = models.PositiveIntegerField(_("order"), editable=False, db_index=True, null=True)
     slug = models.SlugField(unique=True)
 
+
     class Meta(OrderedModel.Meta):
         pass
 
