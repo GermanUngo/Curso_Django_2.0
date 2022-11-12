@@ -10,3 +10,5 @@ urlpatterns = [
     path('', views.indice, name='indice'),
 
 ]
+
+#obg
