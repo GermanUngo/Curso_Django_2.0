@@ -1,2 +1,2 @@
-release: python manage.py migrate --noinput
-web: gunicorn pypro.wsgi --log-file -
+# Modify this Procfile to fit your needs
+web: gunicorn server:app
