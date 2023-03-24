@@ -67,5 +67,5 @@ Renzo Nuccitelli [LinkedIn](https://www.linkedin.com/in/renzo-nuccitelli-3577361
 
 Este módulo foi construído durante o Bootcamp DevPro do [PythonPro](https://pythonpro.com.br).
 
-Aplicação diponivel em https://curso-pythonprodjango.herokuapp.com/
+Aplicação diponivel em https://curso-django.fly.dev
 
