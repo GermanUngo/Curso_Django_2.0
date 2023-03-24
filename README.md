@@ -59,7 +59,7 @@ pipenv sync -d
 
 ## Licença
 
-Este projeto é licenciado sobre a licença MIT - veja [LICENSE](LICENSE) para mais informações.
+Este projeto é licenciado sobre a licença MIT veja [LICENSE](LICENSE) para mais informações.
 
 ## Acknowledgments
 
