@@ -14,7 +14,6 @@ processes = []
   allowed_public_ports = []
   auto_rollback = true
 
-
 [deploy]
   command = "./start.sh"  # Aqui você especifica o comando de inicialização do aplicativo
 
