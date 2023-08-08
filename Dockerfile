@@ -1,24 +1,28 @@
-ARG PYTHON_VERSION=3.11-slim-buster
+ARG PYTHON_VERSION=3.11-slim-bullseye
 
 FROM python:${PYTHON_VERSION}
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-WORKDIR /app
+# install psycopg2 dependencies.
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
 
-COPY Pipfile.lock ./Pipfile.lock
-COPY Pipfile ./Pipfile
+RUN mkdir -p /code
 
-RUN set -ex && \
-    pip install -U pip && \
-    pip install pipenv && \
-    pipenv install --deploy --system
+WORKDIR /code
 
-COPY . /app/
+RUN pip install pipenv
+COPY Pipfile Pipfile.lock /code/
+RUN pipenv install --deploy --system
+COPY . /code
 
-
+ENV SECRET_KEY "BLbYAc4VSsiBfvGR0DLkSOVWRYyGS8q3JmqULjgJMhuxCMy4PL"
+RUN python manage.py collectstatic --noinput
 
 EXPOSE 8000
 
-ENTRYPOINT  ["./start.sh"]
+CMD ["gunicorn", "--bind", ":8000", "--workers", "2", "pypro.wsgi"]
